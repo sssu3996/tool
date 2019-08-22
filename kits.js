@@ -74,6 +74,7 @@ kits.randomHexColor = function() {
   let num = 0;
   for (let i = 0; i < 6; i++) {
     // num = parseInt(Math.random() * 16);
+
     num = this.randomInt(0, 15);
     str += arr[num];
   }
