@@ -112,3 +112,17 @@ kits.appendDataIntoArray = function(key, data) {
   arr.unshift(data);
   this.saveLocalDataArray(key, arr);
 };
+
+// deleteLocalDataById(key,id)   根据对应的id从localStorage中指定键(key)的数组中删除一条数据
+kits.deleteLocalDataById = function(key, id) {
+  arr = this.getLocalDataArray(key, arr);
+  arr = arr || [];
+  arr.forEach((e, i) => {
+    // console.log(e.id);
+    // console.log(id.id);
+    if (e.id == id.id) {
+      arr.splice(0, 1);
+    }
+  });
+  this.saveLocalDataArray(key, arr);
+};

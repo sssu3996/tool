@@ -70,5 +70,8 @@
 
     // appendDataIntoArray(key,data)  向localStorage里面指定键(key)的数组数据追加一个数据对象（data）
     kits.appendDataIntoArray("info", { id: 5, content: "e" });
+
+    // deleteLocalDataById(key,id)   根据对应的id从localStorage中指定键(key)的数组中删除一条数据
+    kits.deleteLocalDataById("info", { id: 5, content: "e" });
   </script>
 </html>
