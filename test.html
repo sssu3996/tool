@@ -67,5 +67,8 @@
 
     // 从locatStorage根据指定的键（key）获取一个数组
     console.log(kits.getLocalDataArray("info"));
+
+    // appendDataIntoArray(key,data)  向localStorage里面指定键(key)的数组数据追加一个数据对象（data）
+    kits.appendDataIntoArray("info", { id: 5, content: "e" });
   </script>
 </html>

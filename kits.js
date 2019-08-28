@@ -104,3 +104,11 @@ kits.getLocalDataArray = function(key, arr) {
   }
   return Arr;
 };
+
+// appendDataIntoArray(key,data)  向localStorage里面指定键(key)的数组数据追加一个数据对象（data）
+kits.appendDataIntoArray = function(key, data) {
+  arr = this.getLocalDataArray(key, arr);
+  arr = arr || [];
+  arr.unshift(data);
+  this.saveLocalDataArray(key, arr);
+};
