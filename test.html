@@ -73,5 +73,12 @@
 
     // deleteLocalDataById(key,id)   根据对应的id从localStorage中指定键(key)的数组中删除一条数据
     kits.deleteLocalDataById("info", { id: 5, content: "e" });
+
+    // modifyLocalDataById(key,id,data)  根据id修改localStorage里面的指定键(key)的数组数据
+    kits.modifyLocalDataById(
+      "info",
+      { id: 4, content: "d" },
+      { id: 10, content: "hello World" }
+    );
   </script>
 </html>

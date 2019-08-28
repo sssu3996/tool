@@ -126,3 +126,16 @@ kits.deleteLocalDataById = function(key, id) {
   });
   this.saveLocalDataArray(key, arr);
 };
+
+// modifyLocalDataById(key,id,data)  根据id修改localStorage里面的指定键(key)的数组数据
+kits.modifyLocalDataById = function(key, id, data) {
+  arr = this.getLocalDataArray(key, arr);
+  arr = arr || [];
+  arr.forEach((e, i) => {
+    if (e.id == id.id) {
+      e.id = data.id;
+      e.content = data.content;
+    }
+  });
+  this.saveLocalDataArray(key, arr);
+};
