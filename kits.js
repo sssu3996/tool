@@ -88,3 +88,19 @@ kits.randomRGBColor = function() {
   let b = this.randomInt(0, 255);
   return "rgb(" + r + "," + g + "," + b + ")";
 };
+
+// 将一个数组(arr)以指定的键(key)存储到localStorage里面
+kits.saveLocalDataArray = function(key, arr) {
+  let json = JSON.stringify(arr);
+  localStorage.setItem(key, json);
+};
+
+// 从locatStorage根据指定的键（key）获取一个数组
+kits.getLocalDataArray = function(key, arr) {
+  let date = localStorage.getItem(key, arr);
+  let Arr = JSON.parse(date);
+  if (!Arr) {
+    Arr = [];
+  }
+  return Arr;
+};
